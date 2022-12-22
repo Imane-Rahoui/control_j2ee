@@ -3,13 +3,13 @@
 
 ## Il suffit de suivre les étapes suivantes :<br>
 
-  ### Installation keycloak-20.0.1<br>
-  ### run mvn package au niveau du directory keycloakx-custom-theme<br>
-  ### ajout du .jar au niveau du dossier providers de keycloak<br>
-  ### lignes de commandes : ```kc.bat config``` et puis ```kc.bat start-dev```<br>
-  ### creation du realm (ecom-control-realm) et du client (product-app)<br>
-  ### creation des utilisateurs et des roles<br>
-  ### lancement des serveurs : Eureka discovery -> gateway puis inventory et customer pour cloturer avec le billing service <br>
+  - Installation keycloak-20.0.1<br>
+  - run mvn package au niveau du directory keycloakx-custom-theme<br>
+  - ajout du .jar au niveau du dossier providers de keycloak<br>
+  - lignes de commandes : ```kc.bat config``` et puis ```kc.bat start-dev```<br>
+  - creation du realm (ecom-control-realm) et du client (product-app)<br>
+  - creation des utilisateurs et des roles<br>
+  - lancement des serveurs : Eureka discovery -> gateway puis inventory et customer pour cloturer avec le billing service <br>
 
 # II- CAPTURES DE L'EXECUTION
 
