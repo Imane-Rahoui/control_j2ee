@@ -1,5 +1,8 @@
+# I- Membre :
 
-# I- SI VOUS SOUHAITEZ TESTER LE CODE 
+  RAHOUI Imane
+  
+# II- SI VOUS SOUHAITEZ TESTER LE CODE 
 
 ## Il suffit de suivre les étapes suivantes :<br>
 
@@ -11,7 +14,7 @@
   - creation des utilisateurs et des roles<br>
   - lancement des serveurs : Eureka discovery -> gateway puis inventory et customer pour cloturer avec le billing service <br>
 
-# II- CAPTURES DE L'EXECUTION
+# III- CAPTURES DE L'EXECUTION
 
 ![1](https://user-images.githubusercontent.com/77898496/209239019-f08fc544-9d98-4bd0-afe5-2825419c15d0.png)
 
@@ -19,7 +22,7 @@
 
 ### PROBLEME AU NIVEAU DU BILLING SERVICE -- BON FONCTIONNEMENT MS AVEC L'AJOUT DE L'ASPET SECURITE - J'AI TROUVE DU MAL A ENVOYER LE TOKEN VERS PRODUCT OU CUSTOMER SERVICE
 
-# III. BONUS  : (Personnalisation du theme de la page de login keycloak)
+# IV. BONUS  : (Personnalisation du theme de la page de login keycloak)
 
 ![3](https://user-images.githubusercontent.com/77898496/209239041-9859be51-427a-4e2f-af2e-d99c8d6884fe.png)
 
