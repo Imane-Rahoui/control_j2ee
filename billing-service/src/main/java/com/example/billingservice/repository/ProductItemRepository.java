@@ -10,6 +10,5 @@ import java.util.Collection;
 @RepositoryRestResource
 public interface ProductItemRepository extends JpaRepository<ProductItem,Long> {
 
-
-    public Collection<ProductItem> findProductItemById(Long id);
+    //public Collection<ProductItem> findProductItemById(Long id);
 }

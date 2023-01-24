@@ -30,7 +30,8 @@ public class KeycloakSecurityConfig extends KeycloakWebSecurityConfigurerAdapter
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
-        http.authorizeRequests().antMatchers("/bills/**").authenticated();
+        http.authorizeRequests()
+                .antMatchers("/bills/**").authenticated();
 
         // http://localhost:8080/realms/ecom-realm/.well-known/openid-configuration for more informations exp to get public keys
     }

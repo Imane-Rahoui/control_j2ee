@@ -16,10 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.hateoas.PagedModel;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 @EnableFeignClients
 @SpringBootApplication
@@ -28,26 +25,32 @@ public class BillingServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(BillingServiceApplication.class, args);
     }
-    //@Bean
+    @Bean
     CommandLineRunner start(
             BillRepository orderRepository,
-            ProductItemRepository productItemRepository,
-            CustomerRestClient customerRestClientService,
-            ProductItemRestClient inventoryRestClientService){
+            ProductItemRepository productItemRepository
+    ){
         return args -> {
-            List<Customer> customers=customerRestClientService.allCustomers().getContent().stream().toList();
-            List<Product> products=inventoryRestClientService.allProducts().getContent().stream().toList();
-            Long customerId=1L;
+
+            List<Product> products= new ArrayList<>();
+            products.add(new Product(1l,"Ordinateur",88,12));
+            products.add(new Product(2l,"Imprimante",88,15));
+            products.add(new Product(3l,"Smartphone",1288,55));
+
+            List<Customer> customers= new ArrayList<>();
+            customers.add(new Customer(1L,"Imane","imi@gmail.com"));
+            customers.add(new Customer(2L,"Touria","tou@gmail.com"));
+            customers.add(new Customer(3L,"Amine","amine@gmail.com"));
             Random random=new Random();
-            Customer customer=customerRestClientService.customerById(customerId);
             for (int i = 0; i <20 ; i++) {
+                System.out.println(customers.get(random.nextInt(customers.size())));
                 Bill order=Bill.builder()
                         .customerid(customers.get(random.nextInt(customers.size())).getId())
                         .status(Math.random()>0.5? OrderStatus.PENDING:OrderStatus.CREATED)
                         .billingDate(new Date())
                         .build();
                 Bill savedOrder = orderRepository.save(order);
-                for (int j = 0; j < products.size() ; j++) {
+                for (int j = 0; j < 3 ; j++) {
                     if(Math.random()>0.70){
                         ProductItem productItem=ProductItem.builder()
                                 .bill(savedOrder)
