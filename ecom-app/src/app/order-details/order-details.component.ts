@@ -13,6 +13,7 @@ export class OrderDetailsComponent implements OnInit {
   orderId!: number;
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) {
     this.orderId = route.snapshot.params['orderId'];
+    console.log("imi : "+this.orderId)
   }
 
   ngOnInit(): void {

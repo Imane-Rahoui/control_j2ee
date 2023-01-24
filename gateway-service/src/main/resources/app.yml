@@ -1,4 +1,6 @@
 spring:
+   application:
+      name: gateway-service
    cloud:
       gateway:
         routes:
@@ -11,6 +13,6 @@ spring:
              predicates:
                 - Path= /products/**
       discovery:
-         enabled: false
+         enabled: true
 server:
    port: 8888
