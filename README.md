@@ -16,12 +16,17 @@
 
 # III- CAPTURES DE L'EXECUTION
 <p align="center">
+  
 ![1](https://user-images.githubusercontent.com/77898496/214306140-21962c9b-ddfd-453e-9ede-2a9856250457.png)
-![2](https://user-images.githubusercontent.com/77898496/214306165-e464693a-b9ca-4fe6-95e5-393f23ae020b.png)
+    
 ![3](https://user-images.githubusercontent.com/77898496/214306180-4752edc0-8d16-4b3a-817c-ec8db6b4266b.png)
+  
 ![4](https://user-images.githubusercontent.com/77898496/214306192-884dcd3d-28fd-456f-92cc-794d17929964.png)
+  
 ![5](https://user-images.githubusercontent.com/77898496/214306206-dfcb4cf5-943d-497d-8c0d-09a975a7780a.png)
+  
 ![6](https://user-images.githubusercontent.com/77898496/214306221-ec5810a5-f6b3-4c28-9793-1430a7566b59.png)
+  
 <p>
 
 ### PROBLEME AU NIVEAU DU BILLING SERVICE -- BON FONCTIONNEMENT MS AVEC L'AJOUT DE L'ASPET SECURITE - J'AI TROUVE DU MAL A ENVOYER LE TOKEN VERS PRODUCT OU CUSTOMER SERVICE
