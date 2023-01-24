@@ -7,6 +7,10 @@
 ## Il suffit de suivre les étapes suivantes :<br>
 
   - Installation keycloak-20.0.1<br>
+  - creation realm / client [config ci dessous]/ user / attribution roles ( USER / ADMIN ) au user 
+
+   ![keycloak](https://user-images.githubusercontent.com/77898496/214346530-2506bf61-3ee5-4ef5-8ea3-a09bf46ba51d.png)
+
   - run mvn package au niveau du directory keycloakx-custom-theme<br>
   - ajout du .jar au niveau du dossier providers de keycloak<br>
   - lignes de commandes : ```kc.bat config``` et puis ```kc.bat start-dev```<br>
