@@ -40,7 +40,12 @@ D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-producer
 <p>
 
 ### j'ai une erreur `` data-analytics-service `` : `` can't deserialize data [[105, 109, 97, 110, 97]] from topic [r1] `` <br>
+# V. DEPLOIMENT SUR DOCKER :
   
+![Capture d’écran 2023-01-25 190700](https://user-images.githubusercontent.com/77898496/214646695-870c1d58-2c78-4f15-9dbb-ca608e4073c8.png)
+  
+![Capture d’écran 2023-01-25 190938](https://user-images.githubusercontent.com/77898496/214647104-95bd16a1-8f0c-4851-8258-2fe9d886b49e.png)
+
 # IV. BONUS  : (Personnalisation du theme de la page de login keycloak) <br>
 
 ![3](https://user-images.githubusercontent.com/77898496/209239041-9859be51-427a-4e2f-af2e-d99c8d6884fe.png)
