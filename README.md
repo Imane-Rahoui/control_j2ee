@@ -16,7 +16,9 @@
   - lignes de commandes : ```kc.bat config``` et puis ```kc.bat start-dev```<br>
   - creation du realm (ecom-control-realm) et du client (product-app)<br>
   - creation des utilisateurs et des roles<br>
-  - lancement des serveurs : Eureka discovery -> gateway puis inventory et customer pour cloturer avec le billing service <br>
+  - lancement des serveurs : Eureka discovery -> gateway puis inventory, customer puis kafka-service pour cloturer avec le billing service <br>
+  - D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\zookeeper-server-start.bat ../config/zookeeper.properties``
+  - D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-server-start.bat ../config/server.properties``
 
 # III- CAPTURES DE L'EXECUTION
 <p align="center">
@@ -33,6 +35,8 @@
 
 ![5](https://user-images.githubusercontent.com/77898496/214628751-5825cb76-bfa9-42fa-a7ef-472ec6dcd7c5.png)
 ### visualisation des données des factures produites dans le topic R1 et qui ont été consommé par le billing service 
+D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-producer.bat --broker-list localhost:9092 --topic R1``
+
 <p>
 
 # IV. BONUS  : (Personnalisation du theme de la page de login keycloak)
