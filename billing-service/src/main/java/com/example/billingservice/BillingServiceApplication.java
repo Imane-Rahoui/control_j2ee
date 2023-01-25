@@ -3,10 +3,7 @@ package com.example.billingservice;
 import com.example.billingservice.entities.Bill;
 import com.example.billingservice.entities.ProductItem;
 import com.example.billingservice.enums.OrderStatus;
-import com.example.billingservice.feign.CustomerRestClient;
-import com.example.billingservice.feign.ProductItemRestClient;
 import com.example.billingservice.model.Customer;
-import com.example.billingservice.model.Product;
 import com.example.billingservice.repository.BillRepository;
 import com.example.billingservice.repository.ProductItemRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -14,7 +11,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
-import org.springframework.hateoas.PagedModel;
 
 import java.util.*;
 
@@ -32,10 +28,10 @@ public class BillingServiceApplication {
     ){
         return args -> {
 
-            List<Product> products= new ArrayList<>();
-            products.add(new Product(1l,"Ordinateur",88,12));
-            products.add(new Product(2l,"Imprimante",88,15));
-            products.add(new Product(3l,"Smartphone",1288,55));
+            List<com.example.billingservice.model.Product> products= new ArrayList<>();
+            products.add(new com.example.billingservice.model.Product(1l,"Ordinateur",88,12));
+            products.add(new com.example.billingservice.model.Product(2l,"Imprimante",88,15));
+            products.add(new com.example.billingservice.model.Product(3l,"Smartphone",1288,55));
 
             List<Customer> customers= new ArrayList<>();
             customers.add(new Customer(1L,"Imane","imi@gmail.com"));
@@ -52,7 +48,7 @@ public class BillingServiceApplication {
                 Bill savedOrder = orderRepository.save(order);
                 for (int j = 0; j < 3 ; j++) {
                     if(Math.random()>0.70){
-                        ProductItem productItem=ProductItem.builder()
+                        ProductItem productItem= ProductItem.builder()
                                 .bill(savedOrder)
                                 .productID(products.get(j).getId())
                                 .price(products.get(j).getPrice())

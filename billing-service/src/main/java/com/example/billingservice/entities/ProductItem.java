@@ -1,6 +1,5 @@
 package com.example.billingservice.entities;
 
-import com.example.billingservice.model.Customer;
 import com.example.billingservice.model.Product;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
