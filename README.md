@@ -21,20 +21,21 @@
 # III- CAPTURES DE L'EXECUTION
 <p align="center">
   
-![1](https://user-images.githubusercontent.com/77898496/214306140-21962c9b-ddfd-453e-9ede-2a9856250457.png)
-    
-![3](https://user-images.githubusercontent.com/77898496/214306180-4752edc0-8d16-4b3a-817c-ec8db6b4266b.png)
-  
-![4](https://user-images.githubusercontent.com/77898496/214306192-884dcd3d-28fd-456f-92cc-794d17929964.png)
-  
-![5](https://user-images.githubusercontent.com/77898496/214306206-dfcb4cf5-943d-497d-8c0d-09a975a7780a.png)
-  
-![6](https://user-images.githubusercontent.com/77898496/214306221-ec5810a5-f6b3-4c28-9793-1430a7566b59.png)
-  
+![1](https://user-images.githubusercontent.com/77898496/214628076-7e8ab0b2-944e-487d-a889-c2656167a5fc.png)
+
+![2](https://user-images.githubusercontent.com/77898496/214628498-81774590-5f1d-4318-aece-09dc70f04c2c.png)
+
+![3](https://user-images.githubusercontent.com/77898496/214628654-7b9710d9-ff7f-4310-acce-2fe9d85b347c.png)
+
+### les données ont été ajouté apres avoir été consommé du topic R1 de kafka
+
+![4](https://user-images.githubusercontent.com/77898496/214628717-61b44ed2-9b40-4411-8bbd-0283da6612e8.png)
+
+![5](https://user-images.githubusercontent.com/77898496/214628751-5825cb76-bfa9-42fa-a7ef-472ec6dcd7c5.png)
+### visualisation des données des factures produites dans le topic R1 et qui ont été consommé par le billing service 
 <p>
 
 # IV. BONUS  : (Personnalisation du theme de la page de login keycloak)
 
 ![3](https://user-images.githubusercontent.com/77898496/209239041-9859be51-427a-4e2f-af2e-d99c8d6884fe.png)
-# KAFKA PROCHAINEMENT
 ## BONNE RECEPTION 😊 
