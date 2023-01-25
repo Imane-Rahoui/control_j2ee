@@ -23,17 +23,6 @@ public class KafkaServiceApplication {
     }
 
     @Bean
-    public Consumer<Bill> billConsumer() {
-        System.out.println("called");
-        return (input) -> {
-
-            System.out.println("****************");
-            System.out.println(input.toString());
-            System.out.println("****************");
-        };
-    }
-
-    @Bean
     public Supplier<Bill> billSupplier() {
         return () -> {
 

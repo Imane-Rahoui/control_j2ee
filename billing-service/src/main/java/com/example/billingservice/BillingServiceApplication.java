@@ -13,6 +13,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 import java.util.*;
+import java.util.function.Consumer;
 
 @EnableFeignClients
 @SpringBootApplication
@@ -21,7 +22,16 @@ public class BillingServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(BillingServiceApplication.class, args);
     }
-    @Bean
+
+    BillRepository orderRepo;
+    ProductItemRepository productItemRepo;
+
+    public BillingServiceApplication(BillRepository orderRepo, ProductItemRepository productItemRepo) {
+        this.orderRepo = orderRepo;
+        this.productItemRepo = productItemRepo;
+    }
+
+    //@Bean
     CommandLineRunner start(
             BillRepository orderRepository,
             ProductItemRepository productItemRepository
@@ -60,6 +70,35 @@ public class BillingServiceApplication {
 
                 }
             }
+        };
+    }
+
+    @Bean
+    public Consumer<Bill> billConsumer() {
+        System.out.println("called");
+        return (input) -> {
+
+            System.out.println("****************");
+            System.out.println(input.toString());
+            System.out.println("****************");
+            Bill order=Bill.builder()
+                    .customerid(input.getCustomer().getId())
+                    .customer(input.getCustomer())
+                    .status(input.getStatus())
+                    .billingDate(input.getBillingDate())
+                    .build();
+            Bill savedOrder = orderRepo.save(order);
+            input.getProductItems().forEach(
+                    (i)->{productItemRepo.save(
+                            ProductItem.builder()
+                                    .bill(savedOrder)
+                                    .productID(i.getProductID())
+                                    .price(i.getPrice())
+                                    .quantity(i.getQuantity())
+                                    .discount(i.getDiscount())
+                                    .build()
+                    );}
+            );
         };
     }
 }

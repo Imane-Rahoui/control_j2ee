@@ -33,6 +33,9 @@ public class InventoryServiceApplication {
 			productRepository.save(new Product(null,"Ordinateur",88,12));
 			productRepository.save(new Product(null,"Imprimante",88,15));
 			productRepository.save(new Product(null,"Smartphone",1288,55));
+			productRepository.save(new Product(null, "Aspirateur", 758, 4));
+			productRepository.save(new Product(null, "Chauffe-eau électrique", 1588, 16));
+			productRepository.save(new Product(null, "Lisseur", 499, 3));
 
 			productRepository.findAll().forEach(p->{
 				System.out.println(p.getName());
